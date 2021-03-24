@@ -1,22 +1,22 @@
-module.exports={
-    css:{
-        loaderOptions:{
-            less:{
-                javascriptEnabled:true,
-            }
-        }
+module.exports = {
+  css: {
+    loaderOptions: {
+      less: {
+        javascriptEnabled: true,
+      },
     },
-    lintOnSave: false,
+  },
+  lintOnSave: false,
 
-    devServer: {
+  devServer: {
 
-        overlay: {
+    overlay: {
 
-            warning: false,
+      warning: false,
 
-            errors: false
-
-        }
+      errors: false,
 
     },
-}
+
+  },
+};

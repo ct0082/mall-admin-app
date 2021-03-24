@@ -53,6 +53,7 @@ const routes = [
     meta: {
       title: '首页',
       icon:'home',
+      redirect:'/index',
       hidden:false,
     },
     children: [{
@@ -87,7 +88,7 @@ router.beforeEach((to, from, next) => {
       if (!isAddRoutes) {
         const menuRoutes = getMenuRoutes(store.state.user.role, ayncRouterMap);
         store.dispatch('changeMenuRoutes', routes.concat(menuRoutes)).then(() => {
-          router.addRoutes(menuRoutes);
+          router.addRoute(...menuRoutes);
           next();
         });
         isAddRoutes = true;
